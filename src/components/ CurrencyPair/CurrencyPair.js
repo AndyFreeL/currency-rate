@@ -64,10 +64,10 @@ const CurrencyPair = ({id, first, second}) => {
                     }
                     } type="number"/>
                     <div className={s.dropdown}>
-                        <Dropdown
-                            options={currencies}
-                            selected={selectedSecondOption}
-                            setSelected={setSelectedSecondOption}/>
+                            <Dropdown
+                                options={currencies}
+                                selected={selectedSecondOption}
+                                setSelected={setSelectedSecondOption}/>
                     </div>
                 </div>
             </div>
