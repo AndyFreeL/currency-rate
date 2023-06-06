@@ -10,7 +10,6 @@ const CurrencyList = () => {
     const dispatch = useDispatch()
     const {currencyPairs} = useSelector(state => state.currencies)
 
-
     return (
         <div className={s.currencyList}>
             {currencyPairs.map(pair =>
@@ -21,8 +20,12 @@ const CurrencyList = () => {
                     second={pair.second}
                 />
             )}
-            <div className={s.currencyList__add} onClick={() => dispatch(addCurrencyPairToStore('USD', 'EUR'))}><img
-                src={plus} alt=""/></div>
+            {
+                currencyPairs.length < 8 &&
+                <div className={s.currencyList__add} onClick={() => dispatch(addCurrencyPairToStore('USD', 'EUR'))}><img
+                    src={plus} alt=""/></div>
+            }
+
         </div>
     );
 };
