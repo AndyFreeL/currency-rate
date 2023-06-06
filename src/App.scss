@@ -2,7 +2,7 @@
   display: grid;
   grid-template-areas:
   "content content right";
-  grid-template-columns: 8fr 3fr;
+  grid-template-columns: auto 350px;
   margin: 0 auto;
   grid-gap: 5px;
   @media screen and (max-width: 972px) {
