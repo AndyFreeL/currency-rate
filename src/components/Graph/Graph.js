@@ -86,11 +86,11 @@ const Graph = ({first,second, secondValue}) => {
 
     useEffect(()=>{
         dispatch(getHistory(first,second,dateFrom(),dateTo())).then(data=>setHistoryData(data))
-    },[])
+    },[secondValue])
 
     return (
-        <div >
-            <Line options={options} data={data}/>
+        <div style={{height:200, width:'100%'}}>
+            <Line height={120} options={options} data={data}/>
         </div>
 
 
