@@ -1,0 +1,72 @@
+.card{
+  //background: #131722;
+  border: 2px solid gray;
+  min-width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  img{
+    width: 25px;
+    height: 25px;
+  }
+  &__btns{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  &__del{
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    transition: background 0.4s;
+    &:hover{
+      background: rgba(49, 57, 208, 0.9);
+    }
+  }
+  &__text{
+    text-align: center;
+    padding:0 5px 15px 5px;
+    font-size: 18px;
+    span{color: #08e108}
+  }
+  &__currencies{
+input{
+  color: #eff3ff;
+  outline: none;
+  padding: 5px 5px 5px 10px;
+  transition: border-color .2s;
+  width: 130px;
+  background-color: transparent;
+  line-height: 22px;
+  font-size: 16px;
+  border-width: 0;
+  border-right: 1px solid #9aa8ba;
+}
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type=number] {
+      -moz-appearance:textfield;
+    }
+  }
+}
+.currencies{
+  position: relative;
+}
+.currency{
+  width: 100%;
+  display: flex;
+  color: #eff3ff;
+  border: 1px solid #9aa8ba;
+  &__name{
+    width: 100px;
+  }
+}
+.dropdown{
+
+}

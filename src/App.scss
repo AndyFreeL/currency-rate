@@ -1,0 +1,26 @@
+.app-wrapper{
+  display: grid;
+  grid-template-areas:
+  "content content right";
+  grid-template-columns: 8fr 3fr;
+  margin: 0 auto;
+  grid-gap: 5px;
+  @media screen and (max-width: 972px) {
+    grid-gap: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.app-wrapper-content{
+  background: #131722;
+  grid-area: content;
+}
+.rightSide{
+  height: 100vh;
+  grid-area: right;
+  min-width: 350px;
+  @media screen and (max-width: 972px) {
+    height: 300px;
+  }
+}
