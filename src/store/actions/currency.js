@@ -39,7 +39,7 @@ export const getLatest=(currentCurrency)=>{
     }
 }
 export const getPairValue=(first,second)=>{
-    return async dispatch=>{
+    return async ()=>{
         try{
             const response = await instance.get('latest', {
                 params:{
@@ -78,6 +78,24 @@ export const delCurrencyPairFromStore=(id)=>{
         try {
             dispatch(delCurrencyPair(id))
         }catch (e){
+            alert(e.response.data.message)
+        }
+    }
+}
+
+export const getHistory=(first,second,dateFrom,dateTo)=>{
+    return async ()=>{
+        try{
+            const response = await instance.get('historical', {
+                params:{
+                    currencies:second,
+                    base_currency:first,
+                    date_from:dateFrom,
+                    date_to:dateTo
+                }
+            })
+            return Object.values(response.data)[0]
+        }catch(e){
             alert(e.response.data.message)
         }
     }

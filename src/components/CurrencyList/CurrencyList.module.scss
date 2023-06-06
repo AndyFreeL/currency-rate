@@ -9,7 +9,7 @@
   @media screen and (max-width: 1279px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media screen and (max-width: 972px) {
+  @media screen and (max-width: 700px) {
     //padding-bottom: 200px;
     //gap: 20px;
     grid-template-columns: 1fr;
@@ -32,7 +32,7 @@
   &__add{
     border: 2px solid gray;
     min-width: 300px;
-    height: 250px;
+    height: 360px;
     display: flex;
     box-sizing: border-box;
     align-items: center;

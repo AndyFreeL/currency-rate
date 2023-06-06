@@ -1,7 +1,6 @@
 .card {
   border: 2px solid gray;
-  min-width: 300px;
-  height: 250px;
+  min-width: 350px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -64,6 +63,9 @@
       margin: 0;
     }
   }
+  &__graph{
+    height: 200px;
+  }
 }
 
 .currency {
@@ -81,7 +83,4 @@
   display: flex;
   justify-content: end;
   width: 100%;
-  &:hover, &:focus{
-    background: #253861;
-  }
 }

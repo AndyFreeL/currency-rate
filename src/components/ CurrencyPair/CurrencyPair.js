@@ -6,6 +6,7 @@ import cross from '../../assets/cross.svg'
 import {useDispatch, useSelector} from "react-redux";
 import Dropdown from "../Dropdown/Dropdown";
 import {delCurrencyPairFromStore, getPairValue, saveCurrencyPairToStore} from "../../store/actions/currency";
+import Graph from "../Graph/Graph";
 
 const CurrencyPair = ({id, first, second}) => {
     const dispatch = useDispatch()
@@ -71,6 +72,7 @@ const CurrencyPair = ({id, first, second}) => {
                     </div>
                 </div>
             </div>
+            <div className={s.card__graph}><Graph first={first} second={second} secondValue={secondValue}/></div>
         </div>
     );
 };

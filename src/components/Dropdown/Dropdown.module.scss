@@ -18,6 +18,9 @@
   &__btn {
     padding: 10px;
     cursor: pointer;
+    &:hover, &:focus{
+      background: #253861;
+    }
   }
 
   &__content {
